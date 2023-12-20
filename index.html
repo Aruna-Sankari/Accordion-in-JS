@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Accordion</title>
+<style>
+body{
+  background-color:pink;
+}
+.accordion {
+  width: 50%;
+  height:30%;
+  text-align:center;
+  margin-left:400px;
+}
+.accordion-item {
+  background-color:white;
+  color: #111;
+  margin: 30px;
+  padding-left:5px;
+  height:auto;
+border:3px solid black;
+}
+.icon{
+font-size:25px;
+padding-left:600px;
+padding-bottom:100px;
+font-weight:bold;
+}
+.accordion-content{
+	display:none;
+	padding:4px;
+}
+.accordion-item.display   .accordion-content{
+	display:block;
+	height:auto;
+}
+.accordion-header{
+	font-size:17px;
+	paddin-top:50px;
+}
+</style>
+</head>
+<body>
+<h1 align="center">ACCORDION</h1>
+<div class="accordion">
+<div class="accordion-item">
+<div class="accordion-header">
+What is Web Development?
+<span class="icon">&#43;</span>
+</div>
+<div class="accordion-content">
+ Web Development broadly refers to the tasks associated with developing functional websites and applications for the Internet.
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+ What is HTML? 
+ <span class="icon">&#43;</span>
+ </div>
+<div class="accordion-content">
+ HTML, is a HyperText Markup Language, it is a dominant markup language for creating websites and anything that can be viewed in a web browser.
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+ What is CSS?  
+ <span class="icon">&#43;</span>
+ </div>
+<div class="accordion-content">
+ CSS is used to design a HTML Webpage using Inline,Internal and External Styles.
+</div>
+</div>
+</div>
+<script>
+let a=document.querySelectorAll(".accordion-item");
+a.forEach(b=>{
+b.addEventListener("click",()=>{
+b.classList.toggle("display");
+});
+});
+</script>
+</body>
+</html>
